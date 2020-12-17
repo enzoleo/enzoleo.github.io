@@ -52,7 +52,7 @@ dl, dd, ol, ul, figure {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: bold;
-  line-height: 1.25;
+  line-height: 1.4;
   text-rendering: optimizeLegibility;
 }
 
@@ -89,7 +89,7 @@ p {
   margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
-  line-height: 1.65;
+  line-height: 1.4;
   font-family: $body-font-family;
 }
 
@@ -98,6 +98,7 @@ ul, ol, dl {
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: 1.5rem;
+  line-height: 1.4;
   font-family: $body-font-family;
 }
 
@@ -105,6 +106,7 @@ ol li {
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: 1.5rem;
+  line-height: 1.4;
 }
 
 li {
@@ -142,11 +144,11 @@ blockquote {
 /**
  * Tables
  */
- table {
-     border-collapse: collapse;
-     margin-bottom: 30px;
-     width: 100%;
- }
+table {
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  width: 100%;
+}
 
  table, th, td {
      border: 1px solid black;
