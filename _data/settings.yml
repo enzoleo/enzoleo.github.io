@@ -1,0 +1,31 @@
+# Change 'comments' to true for Disqus comments
+disqus:
+  comments: false
+  disqus_shortname: 'millennial-3'
+
+# If you are not using Google Analytics, please change 'google-ID' to an empty string
+google-ID: ''
+
+menu:
+- {name: 'Posts', folder: 'pages', file: 'posts.html'}
+- {name: 'About', folder: 'pages', file: 'about.html'}
+- {name: 'Contact', folder: 'pages', file: 'contact.html'}
+
+# Available social icons are powered by Font Awesome, so you can use any icon that they offer
+social:
+- {icon: 'github-alt', link: 'https://github.com/enzoleo'}
+- {icon: 'coffee', link: 'https://enzoleo.github.io'}
+- {icon: 'instagram', link: 'https://instagram.com/enzoleo95'}
+- {icon: 'envelope', link: 'mailto:enzoliao95@gmail.com'}
+- {icon: 'map', link: 'https://www.google.com/maps/@22.6120106,114.0938314,12z'}
+
+# Customize site text
+pagination:
+  next_page: 'Newer'
+  previous_page: 'Older'
+
+sharing_button_prompt: 'Feel free to share!'
+
+related_posts: 'You may also enjoy...'
+
+post_date_prefix: 'Written on'
