@@ -10,6 +10,40 @@ dl, dd, ol, ul, figure {
 }
 
 /*
+  Add custom fonts
+*/
+@font-face {
+  font-family: 'Anak Anak';
+  src: url('/assets/fonts/AnakAnak.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Blobtastics';
+  src: url('/assets/fonts/Blobtastics.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Discobaby';
+  src: url('/assets/fonts/Discobaby.ttf') format('truetype'),
+       url('/assets/fonts/Discobaby.otf') format('opentype');
+}
+@font-face {
+  font-family: 'MurderBlock Black';
+  src: url('/assets/fonts/MurderBlock-Black.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Moon Walker';
+  src: url('/assets/fonts/MoonWalkerPersonalUse.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rushda Funky';
+  src: url('/assets/fonts/RushdaFunky.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Sketchalot';
+  src: url('/assets/fonts/Sketchalot.ttf') format('truetype');
+}
+
+
+/*
   Basic styling
 */
 
