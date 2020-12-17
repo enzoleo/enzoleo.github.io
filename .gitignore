@@ -1,5 +1,9 @@
+# Gemfiles
 _site
 Gemfile.lock
 .sass-cache
 .jekyll-metadata
 
+# Backup files
+*~
+*.vscode

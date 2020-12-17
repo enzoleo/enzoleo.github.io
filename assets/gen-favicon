@@ -1,0 +1,59 @@
+#!/bin/bash
+set -e
+ARGS=`getopt -o "f:h" \
+     -l "font:,help" \
+     -n "getopt.sh" -- "$@"`
+eval set -- "${ARGS}"
+
+function print_help() {
+    cat << EOF
+Usage: ./gen-favicon [OPTIONS]...
+Generate favicon.svg directly.
+  -f, --font         specify the font (will only find font with given name in
+                      the 'assets/fonts/' directory) to display the text
+  -h, --help         display this help and exit
+
+Note we will use lualatex and pdf2svg commands, so please make sure you have
+them installed correctly. TexLive is strongly recommended.
+EOF
+}
+
+font="MurderBlock-Black.otf"
+while true; do
+    case "${1}" in
+        -f|--font)
+            shift; font="${1}";
+            shift;;
+        -h|--help)
+            print_help;
+            exit 0;;
+        --) shift;
+            break;;
+    esac
+done
+
+echo "generate tex file..."
+cat << EOF > favicon.tex
+\RequirePackage{luatex85}
+\documentclass{standalone}
+\usepackage{tikz,bm}
+\usepackage{fontspec}
+\usetikzlibrary{patterns}
+\usepackage[outline]{contour}
+\contourlength{.6pt}
+\tikzset{contour text/.style={node contents={\contour{black}{#1}}}}
+EOF
+echo "\setmainfont{${font}}" >> favicon.tex
+cat << EOF >> favicon.tex
+\begin{document}
+\tikz\node[inner sep=.6pt,scale=20,contour text={\color{white}\bfseries E}];
+\end{document}"
+EOF
+
+echo "compile tex file by lualatex..."
+lualatex favicon.tex
+
+echo "convert pdf into svg logo by pdf2svg command..."
+pdf2svg favicon.pdf favicon.svg
+\rm favicon.pdf favicon.tex favicon.aux favicon.log
+
