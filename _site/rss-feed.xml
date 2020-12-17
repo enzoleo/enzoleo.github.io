@@ -3,8 +3,8 @@
 	<channel>
 		<title>Enzo</title>
 		<description>Homepage</description>
-		<link></link>
-		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
+		<link>https://github.com/pages/enzoleo/enzoleo.github.io</link>
+		<atom:link href="https://github.com/pages/enzoleo/enzoleo.github.io/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Pui Yin Lane in Tai Po!</title>
