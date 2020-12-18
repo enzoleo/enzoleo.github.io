@@ -4,10 +4,17 @@ Hi, this is the repository maintaining personal homepage. This website is simple
 
 ## Local Rendering
 
-Run the following command to render the website locally.
+Some dependencies should be installed first.
+
+```shell
+sudo apt-get install ruby-full ruby-bundler
+```
+
+Now go into the root directory and run the following command to render the website locally.
 
 ```shell
 bundle install
+bundle update
 bundle exec jekyll serve
 ```
 
