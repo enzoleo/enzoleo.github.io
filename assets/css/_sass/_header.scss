@@ -1,13 +1,14 @@
 .site-header {
-  min-height: 45px;
+  min-height: $header-thickness;
   width: $container-width;
 }
 @media (max-width: $container-width) {
   .site-header {
-    min-height: 45px;
-    width: 95vw;
+    min-height: $header-thickness;
+    width: $container-width;
     background: $navbar-backgound;
     color: $navbar-textcolor;
+    position: fixed;
   }
 }
 .site-header a {
@@ -19,7 +20,7 @@
 .site-title {
   font-size: 26px;
   font-weight: 400;
-  line-height: 45px;
+  line-height: $header-thickness;
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 10px;
@@ -34,7 +35,7 @@
   display: inline-block;
 }
 nav a:hover {
-  background: #2b2b2b;
+  background: $navbar-backgound;
   color: white;
 }
 
@@ -58,39 +59,41 @@ nav a:hover {
     padding-right: 0.25rem;
   }
   .dropbtn {
-      background: $navbar-backgound;
-      color: $navbar-textcolor;
-      padding: 16px;
-      margin-top: 4px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
+    background: $navbar-backgound;
+    color: $navbar-textcolor;
+    padding: 14px;
+    margin-top: 0px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
   }
   .dropdown {
-      position: relative;
-      display: inline-block;
+    position: relative;
+    display: inline-block;
   }
   .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: $navbar-backgound;// $navbar-backgound;
+    color: $navbar-textcolor;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
   .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
+    color: $navbar-textcolor;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
   }
   .dropdown-content a:hover {
-    background-color: #f1f1f1
+    background: $navbar-backgound;
+    color: white
   }
   .dropdown:hover .dropdown-content {
-      display: block;
+    display: block;
   }
   .dropdown:hover .dropbtn {
-      background-color: #f1f1f1;
+    background: $navbar-backgound;
+    color: white;
   }
 }

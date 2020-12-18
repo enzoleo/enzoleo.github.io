@@ -9,10 +9,9 @@
   background: $navbar-backgound;
   // Do not render box shadow in black navigation bar.
   // box-shadow: 0 5px 6px -6px #bbb;
-  z-index: 100;
-  vertical-align: baseline;
-  overflow: hidden;
+  vertical-align: middle;
   position: fixed;
+  z-index: 999;
 }
 .container-nav {
   width: $container-nav-width;
