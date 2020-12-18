@@ -15,12 +15,8 @@ $body-font-family: 'Helvetica', sans-serif;
 $code-font-family: "Source Code Pro", monospace;
 
 /* Black navbar */
-/*
 $navbar-backgound: #2b2b2b;
-$navbar-textcolor: #ffffff;
-*/
-$navbar-backgound: white;
-$navbar-textcolor: black;
+$navbar-textcolor: #dddddd;
 
 $brand-color: black;
 
@@ -31,6 +27,6 @@ $tablet-width: 600px;
 
 $phone-width: 480px;
 
-$header-thickness: 56px;
+$header-thickness: 45px;
 
 @import "_sass/-sections-dir";
