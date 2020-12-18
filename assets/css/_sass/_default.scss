@@ -2,6 +2,22 @@
   Site container
 */
 
+.navbar {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: $navbar-backgound;
+  box-shadow: 0 5px 6px -6px #bbb;
+  z-index: 100;
+  vertical-align: baseline;
+  overflow: hidden;
+  position: fixed;
+}
+.container-nav {
+  width: $container-nav-width;
+  margin-left: auto;
+  margin-right: auto;
+}
 .container {
   width: $container-width;
   margin-left: auto;
