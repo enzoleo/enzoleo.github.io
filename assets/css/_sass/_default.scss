@@ -24,6 +24,10 @@
   margin-right: auto;
 }
 .container a {
+  text-decoration: none;
+  color: #0645ad;
+}
+.container a:hover {
   text-decoration: underline;
 }
 .posts-wrapper {

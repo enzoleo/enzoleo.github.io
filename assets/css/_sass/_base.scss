@@ -14,35 +14,10 @@ dl, dd, ol, ul, figure {
   find the fontfaces correctly. The absolute path from the root directory will not work.
 */
 @font-face {
-  font-family: 'Anak Anak';
-  src: url('../fonts/AnakAnak.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Blobtastics';
-  src: url('../fonts/Blobtastics.ttf') format('truetype');
-}
-@font-face {
   font-family: 'Discobaby';
   src: url('../fonts/Discobaby.ttf') format('truetype'),
        url('../fonts/Discobaby.otf') format('opentype');
 }
-@font-face {
-  font-family: 'MurderBlock Black';
-  src: url('../fonts/MurderBlock-Black.otf') format('opentype');
-}
-@font-face {
-  font-family: 'Moon Walker';
-  src: url('../fonts/MoonWalkerPersonalUse.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Rushda Funky';
-  src: url('../fonts/RushdaFunky.otf') format('opentype');
-}
-@font-face {
-  font-family: 'Sketchalot';
-  src: url('../fonts/Sketchalot.ttf') format('truetype');
-}
-
 
 /*
   Basic styling
