@@ -14,28 +14,46 @@
 .site-header a {
   text-decoration: none;
   color: $navbar-textcolor;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
 }
 .site-title {
   font-size: 26px;
   font-weight: 400;
   line-height: $header-thickness;
+  color: $navbar-textcolor;
   margin-bottom: 0;
   margin-top: 0;
-  padding-left: 10px;
   float: left;
+}
+.site-title a {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  padding-left: 10px;
 }
 .menu-list {
   line-height: $header-thickness;
   float: right;
 }
 .menu-link {
-  padding: 0px 12px;
+  padding: 0px 14px;
   display: inline-block;
 }
 nav a:hover {
-  background: $navbar-backgound;
+  -webkit-transition: $icon-transition;
+  -o-transition: $icon-transition;
+  -ms-transition: $icon-transition;
+  -moz-transition: $icon-transition;
+  transition: $icon-transition;
+  color: white;
+}
+.site-title a:hover {
+  -webkit-transition: $icon-transition;
+  -o-transition: $icon-transition;
+  -ms-transition: $icon-transition;
+  -moz-transition: $icon-transition;
+  transition: $icon-transition;
   color: white;
 }
 
@@ -74,7 +92,7 @@ nav a:hover {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: $navbar-backgound;// $navbar-backgound;
+    background-color: $navbar-backgound;
     color: $navbar-textcolor;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
