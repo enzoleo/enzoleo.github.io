@@ -10,7 +10,18 @@
   display: block;
   margin-bottom: 1rem;
   color: #9a9a9a;
-  font-size:0.8rem;
+  font-size: 0.8rem;
+}
+.post-date a {
+  -webkit-transition: $transition-time;
+  -o-transition: $transition-time;
+  -ms-transition: $transition-time;
+  -moz-transition: $transition-time;
+  transition: $transition-time;
+}
+.post-date a:hover {
+  color: $general-link-color;
+  text-decoration: none;
 }
 .featured-image img {
   align: middle;
@@ -90,10 +101,24 @@
           transform: translate(-50%,-50%);
 }
 .related-title {
+  font-size: 80%;
   float: right;
+  padding-top: .35rem;
   padding-bottom: .5rem;
   font-family: $base-font-family;
 }
+a .related-title {
+  -webkit-transition: $transition-time;
+  -o-transition: $transition-time;
+  -ms-transition: $transition-time;
+  -moz-transition: $transition-time;
+  transition: $transition-time;
+  color: black;
+}
+a .related-title:hover {
+  color: $general-link-color;
+}
+
 @media (max-width: $container-width) {
   .related-thumbnail{
     width: 60vw;
