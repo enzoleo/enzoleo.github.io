@@ -90,10 +90,24 @@
           transform: translate(-50%,-50%);
 }
 .related-title {
+  font-size: 80%;
   float: right;
+  padding-top: .35rem;
   padding-bottom: .5rem;
   font-family: $base-font-family;
 }
+a .related-title {
+  -webkit-transition: $transition-time;
+  -o-transition: $transition-time;
+  -ms-transition: $transition-time;
+  -moz-transition: $transition-time;
+  transition: $transition-time;
+  color: black;
+}
+a .related-title:hover {
+  color: $general-link-color;
+}
+
 @media (max-width: $container-width) {
   .related-thumbnail{
     width: 60vw;

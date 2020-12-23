@@ -16,6 +16,7 @@ $code-font-family: "Source Code Pro", monospace;
 $navbar-backgound: #111111;
 $navbar-textcolor: #dddddd;
 $brand-color: black;
+$general-link-color: #0645ad;
 
 $container-nav-width: 1100px;
 $container-width: 1100px;
@@ -23,6 +24,6 @@ $tablet-width: 600px;
 $phone-width: 480px;
 $header-thickness: 42px;
 
-$icon-transition: 0.5s;
+$transition-time: 0.5s;
 
 @import "_sass/-sections-dir";
