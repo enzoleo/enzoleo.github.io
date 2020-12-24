@@ -10,16 +10,6 @@ dl, dd, ol, ul, figure {
 }
 
 /*
-  Add custom fonts. Note that we have to use relative paths to help github pages
-  find the fontfaces correctly. The absolute path from the root directory will not work.
-*/
-@font-face {
-  font-family: 'Discobaby';
-  src: url('../fonts/Discobaby.ttf') format('truetype'),
-       url('../fonts/Discobaby.otf') format('opentype');
-}
-
-/*
   Basic styling
 */
 
