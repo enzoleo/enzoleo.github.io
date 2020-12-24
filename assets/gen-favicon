@@ -41,12 +41,16 @@ cat << EOF > favicon.tex
 \usetikzlibrary{patterns}
 \usepackage[outline]{contour}
 \contourlength{.6pt}
-\tikzset{contour text/.style={node contents={\contour{black}{#1}}}}
+\tikzset{contour text/.style={node contents={}}}
 EOF
 echo "\setmainfont{${font}}" >> favicon.tex
 cat << EOF >> favicon.tex
 \begin{document}
-\tikz\node[inner sep=.6pt,scale=20,contour text={\color{white}\bfseries E}];
+\begin{tikzpicture}
+  \node[rectangle,minimum size=10.15cm]{};
+  \node[inner sep=.6pt,scale=30] at(0,0) {
+    \contour{black}{\color{white}\bfseries E}};
+\end{tikzpicture}
 \end{document}"
 EOF
 
