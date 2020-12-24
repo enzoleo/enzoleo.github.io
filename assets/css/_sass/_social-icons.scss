@@ -5,11 +5,13 @@ $twitter-color: #00aced;
 $instagram-color: #375989;
 $github-color: #343434;
 $github-alt-color: #ababab;
+$house-user-color: #8b4513;
 $linkedin-color: #0073a4;
 $facebook-color: #3d5b99;
 $google-color: #e64a41;
 $pinterest-color: #bd081c;
 $map-o-color: #ff1493;
+$map-marked-alt-color: #ff1493;
 $medium-color: #00ab6c;
 $codepen-color: black;
 $rss-color: #ff6600;
@@ -48,6 +50,9 @@ $rss-color: #ff6600;
 .fa-github-alt {
   @include social-media-icon($github-alt-color, $icon-transition-time);
 }
+.fa-house-user {
+  @include social-media-icon($house-user-color, $icon-transition-time);
+}
 .fa-linkedin {
   @include social-media-icon($linkedin-color, $icon-transition-time);
 }
@@ -59,6 +64,9 @@ $rss-color: #ff6600;
 }
 .fa-pinterest {
   @include social-media-icon($pinterest-color, $icon-transition-time);
+}
+.fa-map-marked-alt {
+  @include social-media-icon($map-marked-alt-color, $icon-transition-time);
 }
 .fa-map-o {
   @include social-media-icon($map-o-color, $icon-transition-time);
