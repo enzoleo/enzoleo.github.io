@@ -18,3 +18,6 @@ bundle update
 bundle exec jekyll serve
 ```
 
+## Fonts
+
+The `favicon.svg` is generated based on [`Permanent Marker`](https://fonts.google.com/specimen/Permanent+Marker?category=Handwriting&preview.text=E&preview.text_type=custom#standard-styles) font. Besides, the guide on the top-left of the navigation bar uses [`Pacifico`](https://fonts.google.com/specimen/Pacifico?category=Handwriting&preview.text=E&preview.text_type=custom) font via web link.
