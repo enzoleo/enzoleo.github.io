@@ -48,4 +48,12 @@ p(r_m,s_0)&p(r_m,s_1)&\cdots&p(r_m,s_n)\\
 
 \end{bmatrix},$$
 
-where $$r_i,s_j$$ denote the $$i,j$$-th grid points in the horizontal and vertical direction, respectively. One can implement this [Simpson's rule](https://en.wikipedia.org/wiki/Simpson%27s_rule) to calculate the integral numerically. By enlarging $$m,n$$ the numerical result will be very precise.
+where $$r_i,s_j$$ denote the $$i,j$$-th grid points in the horizontal and vertical direction, respectively. One can implement this [Simpson's rule](https://en.wikipedia.org/wiki/Simpson%27s_rule) to calculate the integral numerically. By enlarging $$m,n$$ the numerical result will be very precise. Definitely other numerical integration methods are also feasible to calculate the target integral.
+
+<!-- Wait for a better solution
+<script type="text/tikz">
+  \begin{tikzpicture}
+    \draw (0,0) circle (1in);
+  \end{tikzpicture}
+</script>
+-->
