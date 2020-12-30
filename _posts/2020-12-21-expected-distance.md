@@ -4,6 +4,8 @@ title: "Expected Distance between Rectangles"
 author: "Enzo"
 categories: resources
 tags: [tech]
+header-includes:
+   - \usepackage{tikz}
 ---
 
 Given two rectangles on the Euclidean plane with edges parallel to the axes, how to calculate their expected distance? Specifically, given two points $$(x_1,y_1),(x_2,y_2)$$ as the bottom-left and top-right corners of the first rectangle $$A$$, and similarly $$(u_1,v_1),(u_2,v_2)$$ as those of the second rectangle $$B$$, we are required to calculate the integral
@@ -48,4 +50,7 @@ p(r_m,s_0)&p(r_m,s_1)&\cdots&p(r_m,s_n)\\
 
 \end{bmatrix},$$
 
-where $$r_i,s_j$$ denote the $$i,j$$-th grid points in the horizontal and vertical direction, respectively. One can implement this [Simpson's rule](https://en.wikipedia.org/wiki/Simpson%27s_rule) to calculate the integral numerically. By enlarging $$m,n$$ the numerical result will be very precise.
+where $$r_i,s_j$$ denote the $$i,j$$-th grid points in the horizontal and vertical direction, respectively. In fact, the trace $$\mathrm{tr}(\boldsymbol{w}_n\boldsymbol{w}_m^{\top}\boldsymbol{F})$$ is the [Frobenius inner product](https://en.wikipedia.org/wiki/Frobenius_inner_product) $$\langle\boldsymbol{w}_m\boldsymbol{w}_n^{\top},\boldsymbol{F}\rangle_F$$, *i.e.* the accumulation of element-wise multiplication of matrix $$\boldsymbol{w}_m\boldsymbol{w}_n^{\top}$$ and $$\boldsymbol{F}$$.
+
+One can implement this [Simpson's rule](https://en.wikipedia.org/wiki/Simpson%27s_rule) to calculate the integral numerically. By enlarging $$m,n$$ the numerical result will be very precise. Definitely other numerical integration methods are also feasible to calculate the target integral.
+
