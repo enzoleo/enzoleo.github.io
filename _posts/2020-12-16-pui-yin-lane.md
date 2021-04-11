@@ -10,6 +10,6 @@ image: puiyin_lane.jpg
 This picture was taken at [Pui Yin Lane, Tai Po](https://www.google.com/maps/@22.4456584,114.167019,19z) last year.
 
 ## Broken Thoughts...
-When I was a child, I was very fond of solving mathematical problems... Those letters, operators and formulae are so charming that I decided to learn more and more things my teachers didn't know. Probably my friends thought I quit and began to learn some fundamental concepts of computer programming because math was no longer attractive to me. That's not true.
+When I was a child, I was very fond of solving mathematical problems... When working out some difficult problems, the sense of accomplishment was incomparable. Precisely because of this, I was always dreaming of becoming an accomplished mathematician. However, there are a lot of children having full marks in math, but very few mathematicians in the world. *Not all dreams can come true*. This is the cruelest fact that has to be accepted.
 
-There are a lot of children having full marks in math, but very few mathematicians in the world.
+At the same time, I will never deny that I still have a passion for mathematics. It is indeed very admirable to keep original aspirations and do some solid research that most people do not comprehend, in such an impetuous academic area. **Pay respects to all mathematicians**.
