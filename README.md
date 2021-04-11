@@ -13,7 +13,7 @@ sudo apt-get install ruby-full ruby-bundler
 Now go into the root directory and run the following command to render the website locally.
 
 ```shell
-bundle install
+bundle install --path vendor/bundle
 bundle update
 bundle exec jekyll serve
 ```

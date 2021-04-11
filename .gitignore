@@ -7,3 +7,8 @@ Gemfile.lock
 # Backup files
 *~
 *.vscode
+
+# Vendor/bundle
+vendor/
+.bundle/
+
