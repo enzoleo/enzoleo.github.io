@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Uncomment for local rendering.
-# gem "jekyll", "~> 3.6.2"
+# gem "jekyll", "~> 3.9"
 gem "minima", "~> 2.0"
 
 # Uncmment for local rendering.
@@ -15,6 +15,8 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
 end
 
+gem 'kramdown-parser-gfm'
+gem 'webrick'
 gem 'jekyll-paginate'
 gem 'jekyll-sitemap'
 gem 'jekyll-seo-tag'
