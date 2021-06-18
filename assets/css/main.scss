@@ -2,15 +2,9 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-/*
-  Helvetica font-family
-  Note that such specification in CSS show Helvetica only for
-  those who have installed this font family, otherwise some
-  fallbacks will be made.
-*/
-$base-font-family: 'Roboto', sans-serif;
-$body-font-family: 'Roboto', sans-serif;
-$code-font-family: "Source Code Pro", monospace;
+$base-font-family: 'Helvetica', sans-serif;
+$body-font-family: 'Helvetica', sans-serif;
+$code-font-family: monospace;
 
 /* Black navbar */
 $navbar-backgound: #111111;
