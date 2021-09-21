@@ -7,13 +7,7 @@ tags: [posts]
 image: university_station.jpg
 ---
 
-This picture was taken at [the University Station, Hong Kong](https://www.google.com/maps/@22.4151924,114.2109759,18z) last year. The University station was reopened after a long period of maintenance.
+2020年1月拍摄于 [the University Station, Hong Kong](https://www.google.com/maps/@22.4151924,114.2109759,18z)。大学站重开了。
 
 ## Peace
-
-The past two years have been difficult for everyone, especially for those who came to Hong Kong for study. What we require was just a quiet office but our life backfired at last. Before the station was destroyed, I went uphill from the University station every morning and went downhill to the station every night. That was already a routine. Honestly, life became quite inconvenient without metro.
-
-The University station was reopened at the end of the year, and the campus returned to peace after a months of turmoil. Unfortunately, the ensuing epidemic disrupted plans of nearly everyone, and a return to nomal life is still far beyond the horizon. A man must keep moving forward, even if he has to carry the burden of difficulties. Usually I don't like this kind of "inspirational" nonsense, but this time let me pretend to inspire myself here.
-
-
-
+过去一两年多大家来说都挺难的，尤其是对港漂的学生来说。在大学站关闭之前我每天就是从这里上山下山，可能坐扶梯上山，从坡道下山。作为一个地铁自闭者，没有港铁的日子是真的难过多了。在去年12月的时候大学站重开了，像一根救命稻草，只是没想到最后因为疫情的原因又去深圳待了一年多。
