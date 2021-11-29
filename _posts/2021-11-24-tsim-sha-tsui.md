@@ -7,7 +7,7 @@ tags: [posts]
 image: tst_night.jpg
 ---
 
-2021年11月拍于 [Tsim Sha Tsui, Hong Kong](https://www.google.com/maps/@22.2941028,114.1711075,17.6z)，by 美丽摄影师Lu.
+2021年11月拍于 [Tsim Sha Tsui, Hong Kong](https://www.google.com/maps/@22.2941028,114.1711075,17.6z)，by 美丽摄影师Lu。
 
 ## Wandering
 
