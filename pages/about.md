@@ -9,9 +9,17 @@ Hi, I am *Peiyu*. Currently I am a Ph.D. student at the [Department of Computer 
 
 ## Publications
 
-1. Siting Liu, **Peiyu Liao**, Rui Zhang, Zhitang Chen, Wenlong Lv, Yibo Lin, Bei Yu, “FastGR: Global Routing on CPU-GPU with Heterogeneous Task Graph Scheduler”, IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Mar. 14–23, 2022.
-1. **Peiyu Liao**, Siting Liu, Zhitang Chen, Wenlong Lv, Yibo Lin, Bei Yu, “DREAMPlace 4.0: Timing-driven Global Placement with Momentum-based Net Weighting”, IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Mar. 14–23, 2022.
-1. Zhuolun He, **Peiyu Liao**, Siting Liu, Yuzhe Ma, and Bei Yu. “*Physical Synthesis for Advanced Neural Network Processors*”. IEEE/ACM Asian and South Pacific Design Automation Conference (ASPDAC), 2021. (*Invited Paper*)
-1. Siting Liu, Qi Sun, **Peiyu Liao**, Yibo Lin, Bei Yu,  “*Global Placement with Deep Learning-Enabled Explicit Routability  Optimization*”, IEEE/ACM Proceedings Design, Automation and Test in  Europe (DATE), 2021.
-1. Zhuolun He, Lu Zhang, **Peiyu Liao**, Yuzhe Ma, and Bei Yu. “*Reinforcement Learning Driven Physical Synthesis*”. IEEE International Conference on Solid -State and Integrated Circuit Technology (ICSICT), Kunming, 2020. (*Invited Paper*)
-1. Zhuolun He, Yuzhe Ma, Lu Zhang, **Peiyu Liao**, Ngai Wong, Bei Yu, and Martin D. F. Wong. “*Learn to Floorplan through Acquisition of Effective Local Search Heuristics*”. IEEE International Conference on Computer Design (ICCD), 2020.
+### Journal Papers
+
+1. Ziyang Yu, **Peiyu Liao**, Yuzhe Ma, Bei Yu, Martin D.F. Wong, “*CTM-SRAF: Continuous Transmission Mask-based Constraint-aware Sub Resolution Assist Feature Generation*”, accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).
+1. Siting Liu, Yuan Pu, **Peiyu Liao**, Hongzhong Wu, Rui Zhang, Zhitang Chen, Wenlong Lv, Yibo Lin, Bei Yu, “*FastGR : Global Routing on CPU-GPU with Heterogeneous Task Graph Scheduler*”, accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).
+
+### Conference Papers
+
+1. Siting Liu, **Peiyu Liao**, Rui Zhang, Zhitang Chen, Wenlong Lv, Yibo Lin, Bei Yu, “*FastGR: Global Routing on CPU-GPU with Heterogeneous Task Graph Scheduler*”, IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Mar. 14–23, 2022.
+1. **Peiyu Liao**, Siting Liu, Zhitang Chen, Wenlong Lv, Yibo Lin, Bei Yu, “*DREAMPlace 4.0: Timing-driven Global Placement with Momentum-based Net Weighting*”, IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Mar. 14–23, 2022.
+1. Siting Liu, Qi Sun, **Peiyu Liao**, Yibo Lin, Bei Yu, “*Global Placement with Deep Learning-Enabled Explicit Routability Optimization*”, IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Feb. 01–05, 2021.
+1. Zhuolun He, **Peiyu Liao**, Siting Liu, Yuzhe Ma, Bei Yu, “*Physical Synthesis for Advanced Neural Network Processors*”, IEEE/ACM Asian and South Pacific Design Automation Conference (ASPDAC), Jan. 18–21, 2021. (*Invited Paper*)
+1. Zhuolun He, Lu Zhang, **Peiyu Liao**, Yuzhe Ma, Bei Yu, “*Reinforcement Learning Driven Physical Synthesis*”, IEEE International Conference on Solid -State and Integrated Circuit Technology (ICSICT), Kunming, Nov. 3–6, 2020. (*Invited Paper*)
+1. Zhuolun He, Yuzhe Ma, Lu Zhang, **Peiyu Liao**, Ngai Wong, Bei Yu, Martin D. F. Wong, “*Learn to Floorplan through Acquisition of Effective Local Search Heuristics*”, IEEE International Conference on Computer Design (ICCD), Oct. 18–21, 2020.
+
