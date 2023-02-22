@@ -11,11 +11,14 @@ Hi, I am *Peiyu*. Currently I am a Ph.D. student at the [Department of Computer 
 
 ### Journal Papers
 
+1. **Peiyu Liao**, Dawei Guo, Zizheng Guo, Siting Liu, Yibo Lin, Bei Yu, “*DREAMPlace 4.0: Timing-driven Placement with Momentum-based Net Weighting and Lagrangian-based Refinement*”, accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).
 1. Ziyang Yu, **Peiyu Liao**, Yuzhe Ma, Bei Yu, Martin D.F. Wong, “*CTM-SRAF: Continuous Transmission Mask-based Constraint-aware Sub Resolution Assist Feature Generation*”, accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).
 1. Siting Liu, Yuan Pu, **Peiyu Liao**, Hongzhong Wu, Rui Zhang, Zhitang Chen, Wenlong Lv, Yibo Lin, Bei Yu, “*FastGR : Global Routing on CPU-GPU with Heterogeneous Task Graph Scheduler*”, accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).
 
 ### Conference Papers
 
+1. Hongduo Liu, **Peiyu Liao**, Mengchuan Zou, Bowen Pang, Xijun Li, Mingxuan Yuan, Tsung-Yi Ho, Bei Yu, “*Layout Decomposition via Boolean Satisfiability*”, ACM/IEEE Design Automation Conference (DAC), San Francisco, Jul. 09–13, 2023.
+1. **Peiyu Liao**, Hongduo Liu, Yibo Lin, Bei Yu, Martin Wong, “*On a Moreau Envelope Wirelength Model for Analytical Global Placement*”, ACM/IEEE Design Automation Conference (DAC), San Francisco, Jul. 09–13, 2023.
 1. Siting Liu, **Peiyu Liao**, Rui Zhang, Zhitang Chen, Wenlong Lv, Yibo Lin, Bei Yu, “*FastGR: Global Routing on CPU-GPU with Heterogeneous Task Graph Scheduler*”, IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Mar. 14–23, 2022.
 1. **Peiyu Liao**, Siting Liu, Zhitang Chen, Wenlong Lv, Yibo Lin, Bei Yu, “*DREAMPlace 4.0: Timing-driven Global Placement with Momentum-based Net Weighting*”, IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Mar. 14–23, 2022.
 1. Siting Liu, Qi Sun, **Peiyu Liao**, Yibo Lin, Bei Yu, “*Global Placement with Deep Learning-Enabled Explicit Routability Optimization*”, IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE), Feb. 01–05, 2021.
