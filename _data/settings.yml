@@ -17,7 +17,6 @@ social:
 - {icon: 'house-user', link: 'https://enzoleo.github.io'}
 - {icon: 'envelope', link: 'mailto:enzoliao95@gmail.com'}
 - {icon: 'map-marked-alt', link: 'https://www.google.com/maps/@22.6120106,114.0938314,12z'}
-- {icon: 'instagram', link: 'https://instagram.com/enzoleo95'}
 
 # Customize site text
 pagination:
