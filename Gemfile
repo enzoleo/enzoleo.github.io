@@ -7,7 +7,7 @@ gem "jekyll", "~> 3.9"
 gem "minima", "~> 2.0"
 
 # Comment the line for local rendering. To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
+# gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
