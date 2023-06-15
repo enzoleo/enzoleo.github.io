@@ -12,7 +12,6 @@ Hi, I am *Peiyu*. Currently I am a Ph.D. student at the [Department of Computer 
 ### Journal Papers
 
 1. **Peiyu Liao**, Dawei Guo, Zizheng Guo, Siting Liu, Yibo Lin, Bei Yu, “*DREAMPlace 4.0: Timing-driven Placement with Momentum-based Net Weighting and Lagrangian-based Refinement*”, accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).
-1. Ziyang Yu, **Peiyu Liao**, Yuzhe Ma, Bei Yu, Martin D.F. Wong, “*CTM-SRAF: Continuous Transmission Mask-based Constraint-aware Sub Resolution Assist Feature Generation*”, accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).
 1. Siting Liu, Yuan Pu, **Peiyu Liao**, Hongzhong Wu, Rui Zhang, Zhitang Chen, Wenlong Lv, Yibo Lin, Bei Yu, “*FastGR : Global Routing on CPU-GPU with Heterogeneous Task Graph Scheduler*”, accepted by IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).
 
 ### Conference Papers
