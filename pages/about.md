@@ -11,6 +11,7 @@ Hi, I am *Peiyu*. Currently I am working at Huawei HKRC Noah's Ark Lab. Previous
 
 ### Journal Papers
 
+1. Jiaxi Jiang, Yuan Pu, Mingjun Li, Yuxuan Zhao, **Peiyu Liao**, Zuodong Zhang, Yibo Lin, and Bei Yu. "RegPlace: Regularity-aware placement for full-system DNN accelerator designs". In: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD) (2025). Accepted.
 1. Hongduo Liu, **Peiyu Liao**, Mengchuan Zou, Bowen Pang, Xijun Li, Mingxuan Yuan, Tsung-Yi Ho, and Bei Yu. ["Layout decomposition via boolean satisfiability"](http://dx.doi.org/10.1109/TCAD.2024.3467220). In: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD) 44.3 (2024), pp. 1112--1125.
 1. Yuxuan Zhao\*, **Peiyu Liao**\*, Siting Liu, Jiaxi Jiang, Yibo Lin, and Bei Yu. ["Analytical heterogeneous die-to-die 3D placement with macros"](http://dx.doi.org/10.1109/TCAD.2024.3444716). In: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD) 44.2 (2024). arXiv preprint: [arXiv:2403.09070](https://arxiv.org/abs/2403.09070), pp. 402--415.
 1. **Peiyu Liao**\*, Yuxuan Zhao\*, Dawei Guo, Yibo Lin, and Bei Yu. ["Analytical die-to-die 3-D placement with bistratal wirelength model and GPU acceleration"](http://dx.doi.org/10.1109/TCAD.2023.3347293). In: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD) 43.6 (2023). arXiv preprint: [arXiv:2310.07424](https://arxiv.org/abs/2310.07424), pp. 1624--1637.
