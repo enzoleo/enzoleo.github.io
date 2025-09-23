@@ -5,7 +5,7 @@ title: About
 
 ## Bibliography
 
-Hi, I am *Peiyu*. Currently I am working at Huawei HKRC Noah's Ark Lab. Previously, I received my Ph.D. degree in [Computer Science and Engineering](http://www.cse.cuhk.edu.hk/) from [The Chinese University of Hong Kong (CUHK)](http://www.cuhk.edu.hk/english/index.html), under the supervision of [Prof. Bei Yu](http://www.cse.cuhk.edu.hk/~byu/). Prior to that, I received my M.Sc. degree in Information Technology from [the Hong Kong University of Science and Technology (HKUST)](https://www.ust.hk/) in 2019, and my Bachelor degree in Applied Mathematics from [Zhejiang University (ZJU)](http://www.zju.edu.cn/) in 2017.
+Hi, I am *Peiyu*. Currently I am working at Huawei HKRC Noah's Ark Lab. Previously, I received my Ph.D. degree in [Computer Science and Engineering](http://www.cse.cuhk.edu.hk/) from [The Chinese University of Hong Kong (CUHK)](http://www.cuhk.edu.hk/english/index.html) in 2024, under the supervision of [Prof. Bei Yu](http://www.cse.cuhk.edu.hk/~byu/). Prior to that, I received my M.Sc. degree in Information Technology from [the Hong Kong University of Science and Technology (HKUST)](https://www.ust.hk/) in 2019, and my Bachelor degree in Applied Mathematics from [Zhejiang University (ZJU)](http://www.zju.edu.cn/) in 2017.
 
 ## Publications
 
