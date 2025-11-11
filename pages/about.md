@@ -19,6 +19,7 @@ Hi, I am *Peiyu*. Currently I am working at Huawei HKRC Noah's Ark Lab. Previous
 1. Siting Liu, Yuan Pu, **Peiyu Liao**, Hongzhong Wu, Rui Zhang, Zhitang Chen, Wenlong Lv, Yibo Lin, and Bei Yu. ["FastGR: Global routing on CPU-GPU with heterogeneous task graph scheduler"](http://dx.doi.org/10.1109/TCAD.2022.3217668). In: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD) 42.7 (2022), pp. 2317--2330.
 
 ### Conference Papers
+1. Siting Liu, Peng Xu, **Peiyu Liao**, Keren Zhu, and Bei Yu. "Submodular maximization-inspired adaptive routing bend space planning". In: IEEE/ACM Proceedings Design, Automation and Test in Europe (DATE). Verona, Italy, 2026.
 1. **Peiyu Liao**\*, Yuxuan Zhao\*, Siting Liu, and Bei Yu. "Ultrafast density gradient accumulation in 3D analytical placement with divergence theorem". In: IEEE/ACM International Conference on Computer-Aided Design (ICCAD). Munich, Germany, 2025.
 1. Yuxuan Zhao, Feng Gu, Siting Liu, **Peiyu Liao**, and Bei Yu. "H3D: Heterogeneous resources aware global router for face-to-face bonded 3D ICs". In: IEEE/ACM International Conference on Computer-Aided Design (ICCAD). Munich, Germany, 2025.
 1. Yuxuan Zhao, **Peiyu Liao**, and Bei Yu. ["3D-Flow: Flow-based standard cell legalization for 3D ICs"](http://dx.doi.org/10.1109/DAC63849.2025.11132587). In: ACM/IEEE Design Automation Conference (DAC). San Francisco, CA, USA, 2025, pp. 1--7.
