@@ -14,3 +14,6 @@ vendor/
 
 # MacOS files
 **.DS_Store**
+
+# Personal files
+personal/
