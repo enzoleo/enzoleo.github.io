@@ -1,0 +1,33 @@
+<section class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+    <span class="hero__grid"></span>
+    <span class="hero__cursor" data-cursor-glow></span>
+    <img class="hero__ghost" src="{{ '/favicon.svg' | relative_url }}" alt="">
+  </div>
+
+  <div class="hero__inner container">
+    <p class="eyebrow" data-reveal>
+      <span class="eyebrow__dot"></span>{{ site.data.settings.eyebrow }}
+    </p>
+
+    <h1 class="hero__name" data-reveal>{{ site.data.settings.name }}</h1>
+
+    <p class="hero__tagline" data-reveal>{{ site.data.settings.tagline }}</p>
+
+    <div class="hero__actions" data-reveal>
+      {% for action in site.data.settings.actions %}
+        <a class="btn btn--{{ action.style }}" href="{{ action.href }}"{% if action.href contains '://' %} target="_blank" rel="noopener"{% endif %}>
+          {% include icon.html name=action.icon %}
+          <span>{{ action.label }}</span>
+        </a>
+      {% endfor %}
+      <a class="btn btn--quiet" href="#publications">
+        <span>Publications</span>
+        {% include icon.html name='arrow-down' %}
+      </a>
+    </div>
+  </div>
+</section>

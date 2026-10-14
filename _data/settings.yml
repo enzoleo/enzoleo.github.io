@@ -1,30 +1,25 @@
-# Change 'comments' to true for Disqus comments
-disqus:
-  comments: false
-  disqus_shortname: 'millennial-3'
+# ── Hero / identity ────────────────────────────────────────────────
+name: Peiyu Liao
+eyebrow: Huawei HKRC · Noah's Ark Lab
+tagline: >-
+  Working on electronic design automation — analytical placement, routing and
+  machine learning for physical design.
 
-# If you are not using Google Analytics, please change 'google-ID' to an empty string
-google-ID: ''
-
+# ── Top navigation (in-page anchors) ───────────────────────────────
 menu:
-- {name: 'Posts', folder: 'pages', file: 'posts.html'}
-- {name: 'About', folder: 'pages', file: 'about.html'}
-- {name: 'Contact', folder: 'pages', file: 'contact.html'}
+  - {name: About, href: '#about'}
+  - {name: Publications, href: '#publications'}
+  - {name: Contact, href: '#contact'}
 
-# Available social icons are powered by Font Awesome, so you can use any icon that they offer
+# ── Hero buttons ───────────────────────────────────────────────────
+# style: primary | ghost
+actions:
+  - {label: Email, href: 'mailto:enzoliao95@gmail.com', icon: mail, style: primary}
+  - {label: GitHub, href: 'https://github.com/enzoleo', icon: github, style: ghost}
+  - {label: Hong Kong, href: 'https://www.google.com/maps/@22.6120106,114.0938314,12z', icon: map, style: ghost}
+
+# ── Social / contact icons (rendered in the nav bar and the footer) ─
 social:
-- {icon: 'github-alt', link: 'https://github.com/enzoleo'}
-- {icon: 'house-user', link: 'https://enzoleo.github.io'}
-- {icon: 'envelope', link: 'mailto:enzoliao95@gmail.com'}
-- {icon: 'map-marked-alt', link: 'https://www.google.com/maps/@22.6120106,114.0938314,12z'}
-
-# Customize site text
-pagination:
-  next_page: 'Newer'
-  previous_page: 'Older'
-
-sharing_button_prompt: 'Feel free to share!'
-
-related_posts: 'Related Posts...'
-
-post_date_prefix: 'Written on'
+  - {icon: github, label: GitHub, link: 'https://github.com/enzoleo'}
+  - {icon: mail, label: Email, link: 'mailto:enzoliao95@gmail.com'}
+  - {icon: map, label: Map, link: 'https://www.google.com/maps/@22.6120106,114.0938314,12z'}

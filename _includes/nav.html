@@ -1,0 +1,37 @@
+<header class="topbar" id="topbar">
+  <div class="topbar__inner container-wide">
+
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.data.settings.name }} — home">
+      <span class="brand__mark">
+        <img src="{{ '/favicon.svg' | relative_url }}" alt="" width="22" height="22">
+      </span>
+      <span class="brand__text">{{ site.data.settings.name }}</span>
+    </a>
+
+    <nav class="nav" id="site-nav" aria-label="Sections">
+      {% for item in site.data.settings.menu %}
+        <a class="nav__link" href="{{ item.href }}">{{ item.name }}</a>
+      {% endfor %}
+    </nav>
+
+    <div class="topbar__tools">
+      {% for item in site.data.settings.social %}
+        <a class="icon-btn" href="{{ item.link }}" target="_blank" rel="noopener" aria-label="{{ item.label }}" title="{{ item.label }}">
+          {% include icon.html name=item.icon %}
+        </a>
+      {% endfor %}
+
+      <button class="icon-btn icon-btn--theme" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme" title="Switch theme">
+        {% include icon.html name='sun' %}
+        {% include icon.html name='moon' %}
+      </button>
+
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+
+  </div>
+  <div class="topbar__progress" data-progress aria-hidden="true"></div>
+</header>

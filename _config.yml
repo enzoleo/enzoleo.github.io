@@ -1,23 +1,29 @@
 # Site Build Settings
 
-# jekyll-paginate configuration
-paginate: 5
-
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: none
-plugins: [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+plugins: [jekyll-sitemap, jekyll-seo-tag]
 
 sass:
   sass_dir: assets/css
   style: :nested
 
-# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title: "Enzo"
-description: "Homepage"
-author: "Peiyu Liao"
+kramdown:
+  auto_ids: true
 
-# RSS 2.0 can be used instead of Atom by uncommenting following two lines
-#feed:
-#  path: rss-feed.xml
+# Site metadata (used by jekyll-seo-tag and the page shell)
+title: "Peiyu Liao"
+description: "Electronic Design Automation · physical design, placement and routing"
+author: "Peiyu Liao"
+url: "https://enzoleo.github.io"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE.md
+  - node_modules
+  - vendor/
+  - assets/gen-favicon
