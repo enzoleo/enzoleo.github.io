@@ -1,4 +1,4 @@
-<footer class="footer" id="contact">
+<footer class="footer">
   <div class="footer__inner container-wide">
     <div class="footer__brand">
       <span class="brand__mark brand__mark--sm">
@@ -11,10 +11,12 @@
     </div>
 
     <nav class="footer__links" aria-label="Elsewhere">
-      {% for item in site.data.settings.social %}
+      {% for item in site.data.settings.contacts %}
+        {%- if item.link %}
         <a href="{{ item.link }}"{% if item.link contains '://' %} target="_blank" rel="noopener"{% endif %}>
           {% include icon.html name=item.icon %}<span>{{ item.label }}</span>
         </a>
+        {%- endif %}
       {% endfor %}
     </nav>
   </div>

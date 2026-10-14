@@ -9,8 +9,8 @@ Markdown (bio + publication lists). The shell around it is:
 | --- | --- |
 | `pages/about.md` | The only content file. `permalink: /`, so it renders at the site root. |
 | `_layouts/default.html` | Page shell: head, top bar, hero, content, footer. |
-| `_includes/` | `head`, `nav`, `hero`, `footer`, `icon` partials. |
-| `_data/settings.yml` | Name, tagline, nav items, hero buttons, social links. |
+| `_includes/` | `head`, `nav`, `hero`, `footer`, `icon`, `contact-cards` partials. |
+| `_data/settings.yml` | Name, tagline, nav items, hero buttons, contact links. |
 | `assets/css/main.css` | The whole stylesheet — plain CSS, no Sass build step. |
 | `assets/js/site.js` | Progressive enhancement: theme, scroll effects, publication cards and filters. |
 | `favicon.svg` | The logo mark, also used in the top bar and footer. |
@@ -30,8 +30,38 @@ Add a publication by appending a numbered item to the right list in
 publication year, an `arXiv preprint: [link]`, and a paper marked as
 `<span style="color:brown">**Best Paper Award**</span>`.
 
+Each card follows the layout of [`cv.pdf`](../cv): a row of chips on top — the
+venue, the year, a clickable `arXiv <id>` chip for any arXiv link, and an award
+chip — then a bold title, the author list with your own name bolded, and the
+citation with the venue name in italics and the volume, year and pages upright
+beside it, exactly as biblatex sets it. The chips share one pill shape, height
+and border so the row reads as a single line. The leading `In:` is dropped, as
+the CV drops it; `accepted by` is kept, since it is the one signal that a paper
+is accepted rather than published.
+
 If JavaScript is disabled the page degrades to the plain Markdown lists, so
 `pages/about.md` stays the single source of truth either way.
+
+## Contact
+
+The contact cards under `## Contact` are not written in the Markdown.
+`pages/about.md` carries one line — `{% include contact-cards.html %}` — and the
+include renders them at build time from the `contacts:` list in
+`_data/settings.yml`, the same list that fills the nav bar and the footer. Edit
+a link, a label or a `value` there once and all three places follow.
+
+Two rules decide how an entry is drawn:
+
+- **no `link`** — the nav bar and footer skip it, and the Contact section renders
+  it as an inert card (same box, no `href`, nothing happens on click).
+- **`retired: true`** — the card is drained of colour, gets a dashed border and
+  a struck-through value, and spans the full width of the grid. Use it for
+  details that are on the record but no longer current.
+
+Because the include sits inside a Markdown file it is handed to kramdown, which
+ends a raw HTML block at the first blank line — so the include uses Liquid
+whitespace control on every tag to keep empty lines out of its output. If you
+extend it, keep that in mind.
 
 ## Local rendering
 

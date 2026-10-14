@@ -15,10 +15,12 @@
     </nav>
 
     <div class="topbar__tools">
-      {% for item in site.data.settings.social %}
+      {% for item in site.data.settings.contacts %}
+        {%- if item.link %}
         <a class="icon-btn" href="{{ item.link }}" target="_blank" rel="noopener" aria-label="{{ item.label }}" title="{{ item.label }}">
           {% include icon.html name=item.icon %}
         </a>
+        {%- endif %}
       {% endfor %}
 
       <button class="icon-btn icon-btn--theme" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme" title="Switch theme">

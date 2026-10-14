@@ -1,6 +1,6 @@
 # ── Hero / identity ────────────────────────────────────────────────
 name: Peiyu Liao
-eyebrow: Huawei HKRC · Noah's Ark Lab
+eyebrow: Huawei HKRC · AI Lab
 tagline: >-
   Working on electronic design automation — analytical placement, routing and
   machine learning for physical design.
@@ -18,8 +18,16 @@ actions:
   - {label: GitHub, href: 'https://github.com/enzoleo', icon: github, style: ghost}
   - {label: Hong Kong, href: 'https://www.google.com/maps/@22.6120106,114.0938314,12z', icon: map, style: ghost}
 
-# ── Social / contact icons (rendered in the nav bar and the footer) ─
-social:
-  - {icon: github, label: GitHub, link: 'https://github.com/enzoleo'}
-  - {icon: mail, label: Email, link: 'mailto:enzoliao95@gmail.com'}
-  - {icon: map, label: Map, link: 'https://www.google.com/maps/@22.6120106,114.0938314,12z'}
+# ── Contacts ───────────────────────────────────────────────────────
+# One source for three places: the icons in the nav bar, the same icons in the
+# footer, and the cards in the Contact section. `value` is only shown by the
+# cards — the icon links use `label` for their tooltip and screen-reader text.
+#
+# An entry without a `link` is not a link: the nav bar and footer skip it, and
+# the Contact section renders it as an inert card. `retired: true` greys that
+# card out and strikes the value through — for places that are no longer current.
+contacts:
+  - {icon: github, label: GitHub, value: enzoleo, link: 'https://github.com/enzoleo'}
+  - {icon: mail, label: Email, value: enzoliao95@gmail.com, link: 'mailto:enzoliao95@gmail.com'}
+  - {icon: map, label: Map, value: Hong Kong, link: 'https://www.google.com/maps/@22.6120106,114.0938314,12z'}
+  - {icon: office, label: Office, value: 'Room 1026, Ho Sin Hang Engineering Building', retired: true}

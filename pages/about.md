@@ -6,7 +6,7 @@ permalink: /
 
 ## About
 
-Hi, I am *Peiyu*. Currently I am working at Huawei HKRC Noah's Ark Lab. Previously, I received my Ph.D. degree in [Computer Science and Engineering](http://www.cse.cuhk.edu.hk/) from [The Chinese University of Hong Kong (CUHK)](http://www.cuhk.edu.hk/english/index.html) in 2024, under the supervision of [Prof. Bei Yu](http://www.cse.cuhk.edu.hk/~byu/). Prior to that, I received my M.Sc. degree in Information Technology from [the Hong Kong University of Science and Technology (HKUST)](https://www.ust.hk/) in 2019, and my Bachelor degree in Applied Mathematics from [Zhejiang University (ZJU)](http://www.zju.edu.cn/) in 2017.
+Hi, I am *Peiyu*. Currently I am working at Huawei HKRC AI Lab. Previously, I received my Ph.D. degree in [Computer Science and Engineering](http://www.cse.cuhk.edu.hk/) from [The Chinese University of Hong Kong (CUHK)](http://www.cuhk.edu.hk/english/index.html) in 2024, under the supervision of [Prof. Bei Yu](http://www.cse.cuhk.edu.hk/~byu/). Prior to that, I received my M.Sc. degree in Information Technology from [the Hong Kong University of Science and Technology (HKUST)](https://www.ust.hk/) in 2019, and my Bachelor degree in Applied Mathematics from [Zhejiang University (ZJU)](http://www.zju.edu.cn/) in 2017.
 
 ## Publications
 
@@ -40,3 +40,7 @@ Hi, I am *Peiyu*. Currently I am working at Huawei HKRC Noah's Ark Lab. Previous
 1. Zhuolun He, Yuzhe Ma, Lu Zhang, **Peiyu Liao**, Ngai Wong, Bei Yu, and Martin D. F. Wong. ["Learn to floorplan through acquisition of effective local search heuristics"](http://dx.doi.org/10.1109/ICCD50377.2020.00061). In: IEEE International Conference on Computer Design (ICCD). Hartford, CT, USA, 2020, pp. 324--331.
 1. Zhuolun He, Lu Zhang, Peiyu Liao, Yuzhe Ma, and Bei Yu. ["Reinforcement learning driven physical synthesis : (invited paper)"](http://dx.doi.org/10.1109/ICSICT49897.2020.9278350). In: IEEE International Conference on Solid-State and Integrated Circuit Technology (ICSICT). Invited Paper. Kunming, China, 2020, pp. 1--4.
 
+
+## Contact
+
+{% include contact-cards.html %}

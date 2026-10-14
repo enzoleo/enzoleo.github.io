@@ -1,0 +1,28 @@
+{%- comment -%}
+  Contact cards. Rendered at build time from _data/settings.yml, so the same
+  list drives the nav bar, the footer and this block.
+
+  An entry with no `link` is not actionable: it renders as the same box without
+  an href, and with `retired: true` it is greyed out and struck through.
+
+  Every tag carries whitespace control on purpose: this include lands inside
+  pages/about.md and is therefore handed to kramdown, which ends a raw HTML
+  block at the first blank line. Trimming keeps the markup free of empty lines
+  so kramdown passes it through untouched.
+{%- endcomment -%}
+<ul class="contact-grid">
+{%- for item in site.data.settings.contacts -%}
+  {%- assign state = '' -%}
+  {%- if item.retired -%}{%- assign state = ' contact-card--retired' -%}{%- endif -%}
+  <li{% if item.retired %} class="is-retired"{% endif %}><a class="contact-card{{ state }}"
+    {%- if item.link %} href="{{ item.link }}"{% if item.link contains '://' %} target="_blank" rel="noopener"{% endif %}
+    {%- else %} aria-disabled="true"{% endif %}>
+    <span class="contact-card__icon">{% include icon.html name=item.icon %}</span>
+    <span class="contact-card__body">
+      <span class="contact-card__label">{{ item.label }}</span>
+      <span class="contact-card__value">{{ item.value | default: item.label }}</span>
+    </span>
+  </a></li>
+{%- endfor -%}
+</ul>
+

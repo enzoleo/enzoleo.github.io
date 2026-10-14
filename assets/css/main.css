@@ -3,7 +3,7 @@
    One page, one stylesheet. Plain CSS (no Sass build step).
    1. Tokens        5. Hero            9. Footer
    2. Base          6. Content/prose  10. To top
-   3. Utils         7. Publications   11. Responsive
+   3. Utils         7. Cards         11. Responsive
    4. Topbar        8. Controls       12. Print / motion
    ========================================================================= */
 
@@ -23,6 +23,9 @@
   --radius-sm: 10px;
   --topbar-h: 62px;
 
+  /* the hero name's size, shared with the margins that space it out */
+  --name-size: clamp(2.9rem, 9vw, 5rem);
+
   /* light theme (default) */
   --bg: #f6f7fa;
   --bg-elev: #ffffff;
@@ -41,6 +44,9 @@
   --award: #a35a06;
   --award-soft: rgba(180, 83, 10, 0.1);
   --award-border: rgba(180, 83, 10, 0.24);
+  --arxiv: #0e7490;
+  --arxiv-soft: rgba(14, 165, 233, 0.09);
+  --arxiv-border: rgba(14, 165, 233, 0.26);
   --topbar-bg: rgba(246, 247, 250, 0.82);
   --shadow-sm: 0 1px 2px rgba(16, 20, 40, 0.06), 0 2px 10px rgba(16, 20, 40, 0.04);
   --shadow-md: 0 18px 40px -20px rgba(16, 20, 40, 0.3), 0 3px 10px rgba(16, 20, 40, 0.06);
@@ -71,6 +77,9 @@
   --award: #f0b429;
   --award-soft: rgba(240, 180, 41, 0.12);
   --award-border: rgba(240, 180, 41, 0.28);
+  --arxiv: #67e8f9;
+  --arxiv-soft: rgba(103, 232, 249, 0.12);
+  --arxiv-border: rgba(103, 232, 249, 0.26);
   --topbar-bg: rgba(10, 11, 16, 0.76);
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 20px 44px -22px rgba(0, 0, 0, 0.8), 0 2px 8px rgba(0 0 0 / 0.4);
@@ -102,6 +111,9 @@
     --award: #f0b429;
     --award-soft: rgba(240, 180, 41, 0.12);
     --award-border: rgba(240, 180, 41, 0.28);
+    --arxiv: #67e8f9;
+    --arxiv-soft: rgba(103, 232, 249, 0.12);
+    --arxiv-border: rgba(103, 232, 249, 0.26);
     --topbar-bg: rgba(10, 11, 16, 0.76);
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
     --shadow-md: 0 20px 44px -22px rgba(0, 0, 0, 0.8), 0 2px 8px rgba(0, 0, 0, 0.4);
@@ -314,11 +326,20 @@ svg { width: 1.05em; height: 1.05em; flex: none; }
 .hero {
   position: relative;
   isolation: isolate;
-  padding: 92px 0 84px;
+  /* The blobs are clipped flat by this box, so the hero ends on a straight edge.
+     That edge is drawn on purpose with the border below rather than faded out;
+     the gap the reader sees above the first section is .content's padding-top. */
+  padding: 92px 0 64px;
   overflow: hidden;
+  border-bottom: 1px solid var(--border);
 }
 
-.hero__bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
 
 .blob {
   position: absolute;
@@ -366,24 +387,14 @@ svg { width: 1.05em; height: 1.05em; flex: none; }
 }
 .hero__cursor.is-on { opacity: 1; }
 
-.hero__ghost {
-  position: absolute;
-  right: 3%;
-  bottom: -12%;
-  width: 320px;
-  height: 320px;
-  opacity: 0.05;
-  transform: rotate(-8deg);
-  filter: blur(0.4px);
-}
-
 .hero__inner { position: relative; text-align: center; }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  margin: 0 0 20px;
+  /* 20px, less the room the name's padding added above it */
+  margin: 0 0 calc(20px - 0.1 * var(--name-size));
   padding: 6px 15px 6px 12px;
   font-size: 0.82rem;
   font-weight: 500;
@@ -409,9 +420,15 @@ svg { width: 1.05em; height: 1.05em; flex: none; }
 }
 
 .hero__name {
+  /* The gradient below paints only where the box is, so the box must clear the
+     glyphs' ink. At line-height 1.03 it does not: the descender of the "y" in
+     "Peiyu" reaches below it and gets cut off flat. The padding buys that room
+     back; the two margins around the name hand back exactly as much, so there
+     is no negative margin to collapse and every gap stays where it was. */
   margin: 0;
+  padding: calc(0.1 * var(--name-size)) 0 calc(0.12 * var(--name-size));
   font-family: var(--font-display);
-  font-size: clamp(2.9rem, 9vw, 5rem);
+  font-size: var(--name-size);
   font-weight: 600;
   line-height: 1.03;
   letter-spacing: -0.032em;
@@ -427,7 +444,8 @@ svg { width: 1.05em; height: 1.05em; flex: none; }
 
 .hero__tagline {
   max-width: 46ch;
-  margin: 22px auto 0;
+  /* 22px, less the room the name's padding added below it */
+  margin: calc(22px - 0.12 * var(--name-size)) auto 0;
   font-size: 1.06rem;
   line-height: 1.62;
   color: var(--text-muted);
@@ -480,7 +498,12 @@ svg { width: 1.05em; height: 1.05em; flex: none; }
 
 /* ── 6. Content / prose ──────────────────────────────────────────────────── */
 
-.content { padding-bottom: 84px; }
+/* padding-top is the whole gap between the hero and the first section — the
+   first heading's own top margin is zeroed out below */
+.content {
+  padding-top: 76px;
+  padding-bottom: 84px;
+}
 
 .content h2 {
   position: relative;
@@ -522,7 +545,8 @@ svg { width: 1.05em; height: 1.05em; flex: none; }
   background: linear-gradient(90deg, var(--border), transparent);
 }
 
-/* the first heading sits right under the hero, which already has its own space */
+/* the first heading takes no margin of its own — the gap above it is .content's
+   padding-top, so that one value controls the whole distance */
 .content > h2:first-child,
 .content > .content-section:first-child > h2:first-child { margin-top: 0; }
 
@@ -536,6 +560,16 @@ svg { width: 1.05em; height: 1.05em; flex: none; }
 
 .content strong { color: var(--text); font-weight: 600; }
 .content em { font-style: italic; }
+
+.content ul {
+  margin: 0 0 1.1em;
+  padding-left: 1.3em;
+  color: var(--text-soft);
+  font-size: 1.03rem;
+  line-height: 1.78;
+}
+.content ul > li { margin-bottom: 6px; }
+.content ul > li::marker { color: var(--text-muted); }
 
 /* the bio paragraph reads as a lead */
 .content #about + p,
@@ -561,7 +595,7 @@ svg { width: 1.05em; height: 1.05em; flex: none; }
 /* hide headings/sections emptied by filtering */
 .is-filtered-out { display: none !important; }
 
-/* ── 7. Publications ─────────────────────────────────────────────────────── */
+/* ── 7. Cards (publications, contact) ─────────────────────────────────────── */
 
 .pub-group { margin-bottom: 34px; }
 
@@ -655,6 +689,7 @@ ol.is-enhanced {
   color: var(--text-muted);
   font-size: 0.71rem;
   font-weight: 600;
+  line-height: 1.4;
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
@@ -668,12 +703,32 @@ ol.is-enhanced {
   letter-spacing: 0.06em;
 }
 .chip--year { font-variant-numeric: tabular-nums; }
+
 .chip--award {
   color: var(--award);
   background: var(--award-soft);
   border-color: var(--award-border);
 }
-.chip--award strong { font-weight: 600; }
+.chip--award svg { fill: currentColor; stroke: none; }
+
+/* an arXiv reference is a chip like any other — same box, same border — with
+   the identifier set in mono so it stays scannable */
+.chip--arxiv {
+  color: var(--arxiv);
+  background: var(--arxiv-soft);
+  border-color: var(--arxiv-border);
+  font-weight: 500;
+}
+.chip--arxiv:hover {
+  border-color: var(--arxiv);
+  text-decoration: none;
+}
+.chip__id {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.95em;
+  font-weight: 600;
+  letter-spacing: 0;
+}
 
 .pub__title {
   margin: 0 0 8px;
@@ -701,25 +756,27 @@ ol.is-enhanced {
 
 .pub__authors {
   margin: 0 0 4px;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   line-height: 1.58;
   color: var(--text-soft);
 }
 .pub__authors .is-me {
-  font-weight: 600;
-  color: var(--accent-ink);
-  background: var(--accent-soft);
-  border-radius: 4px;
-  padding: 0 4px;
+  font-weight: 700;
+  color: var(--text);
 }
 
 .pub__venue {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   line-height: 1.55;
   color: var(--text-muted);
 }
-/* inline links that survive in the citation tail (arXiv, publisher) */
+
+/* the venue name carries the emphasis, exactly as the CV sets the journal or
+   book title in italics with the volume, year and pages upright beside it */
+.pub__venue-name { font-style: italic; }
+/* any link left in the citation tail — the arXiv reference is lifted out into a
+   chip above, so this only catches extras such as a project page */
 .pub__venue a {
   display: inline-block;
   padding: 0 8px;
@@ -736,6 +793,110 @@ ol.is-enhanced {
   border-color: transparent;
   text-decoration: none;
 }
+
+/* contact cards — the same furniture as the publication cards, so the Contact
+   section reads as part of the page rather than as a leftover list */
+.content .contact-grid {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  /* three columns on a desktop: the three live contacts share the first row and
+     the retired card takes the whole second one */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.content .contact-grid > li { display: flex; margin-bottom: 0; }
+/* the retired card is a full-width row of its own: the address is long, and
+   letting it wrap inside a third of the width would stretch every card */
+.content .contact-grid > li.is-retired { grid-column: 1 / -1; }
+
+.contact-card {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 17px 15px 19px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  color: var(--text);
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.contact-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  transition: transform 0.42s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.contact-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+.contact-card:hover::before { transform: scaleY(1); }
+
+.contact-card__icon {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+.contact-card__icon svg { width: 16px; height: 16px; }
+
+.contact-card__body { display: grid; gap: 1px; min-width: 0; }
+.contact-card__label { font-size: 0.875rem; font-weight: 600; }
+
+.contact-card__value {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Retired: same box, drained of colour. The dashed border says "placeholder"
+   rather than "highlighted", which a lighter fill would say in dark mode. It is
+   not an <a> with an href, so none of the hover affordances apply. */
+.contact-card--retired {
+  background: transparent;
+  border-style: dashed;
+  box-shadow: none;
+  cursor: default;
+}
+.contact-card--retired .contact-card__icon {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.contact-card--retired .contact-card__label { color: var(--text-muted); font-weight: 500; }
+.contact-card--retired .contact-card__value {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  white-space: normal;
+  overflow: visible;
+}
+.contact-card--retired:hover {
+  transform: none;
+  border-color: var(--border);
+  box-shadow: none;
+}
+.contact-card--retired:hover::before { transform: scaleY(0); }
 
 /* ── 8. Publication controls ─────────────────────────────────────────────── */
 
@@ -998,8 +1159,8 @@ ol.is-enhanced {
   .nav__link { padding: 11px 13px; font-size: 0.95rem; }
   .nav-toggle { display: flex; }
 
-  .hero { padding: 68px 0 62px; }
-  .hero__ghost { display: none; }
+  .hero { padding: 68px 0 48px; }
+  .content { padding-top: 56px; }
   .blob { filter: blur(56px); }
 }
 

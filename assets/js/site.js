@@ -378,25 +378,100 @@
     return null;
   }
 
-  var SPARKLE = 'M12 2.6l1.9 5.7a3 3 0 0 0 1.9 1.9l5.7 1.9-5.7 1.9a3 3 0 0 0-1.9 1.9L12 21.6l-1.9-5.7a3 3 0 0 0-1.9-1.9L2.5 12l5.7-1.9a3 3 0 0 0 1.9-1.9L12 2.6Z';
-
-  function svgIcon(path, filled) {
+  function svgIcon(path) {
     var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('viewBox', '0 0 24 24');
     svg.setAttribute('aria-hidden', 'true');
-    if (filled) {
-      svg.setAttribute('fill', 'currentColor');
-    } else {
-      svg.setAttribute('fill', 'none');
-      svg.setAttribute('stroke', 'currentColor');
-      svg.setAttribute('stroke-width', '1.9');
-      svg.setAttribute('stroke-linecap', 'round');
-      svg.setAttribute('stroke-linejoin', 'round');
-    }
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '1.9');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
     var p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     p.setAttribute('d', path);
     svg.appendChild(p);
     return svg;
+  }
+
+  /* -- chips / badges -----------------------------------------------------
+     Everything in the badge row shares one pill shape and border; only the
+     colour and the leading icon differ. The sparkle marks an award the way
+     the CV's \tikzbadge marks one. */
+  var SPARKLE = 'M12 2.6l1.9 5.7a3 3 0 0 0 1.9 1.9l5.7 1.9-5.7 1.9a3 3 0 0 0-1.9 1.9L12 21.6l-1.9-5.7a3 3 0 0 0-1.9-1.9L2.5 12l5.7-1.9a3 3 0 0 0 1.9-1.9L12 2.6Z';
+
+  function makeAwardChip(label) {
+    var chip = document.createElement('span');
+    chip.className = 'chip chip--award';
+    chip.title = label;
+    chip.appendChild(svgIcon(SPARKLE));
+    chip.appendChild(document.createTextNode(label));
+    return chip;
+  }
+
+  function makeArxivChip(id, href) {
+    var chip = document.createElement('a');
+    chip.className = 'chip chip--arxiv';
+    chip.href = href;
+    chip.target = '_blank';
+    chip.rel = 'noopener';
+    chip.appendChild(document.createTextNode('arXiv'));
+    var value = document.createElement('span');
+    value.className = 'chip__id';
+    value.textContent = id;
+    chip.appendChild(value);
+    return chip;
+  }
+
+  function arxivId(text) {
+    var match = String(text || '').match(/(\d{4}\.\d{4,5})(v\d+)?/);
+    return match ? match[0] : '';
+  }
+
+  /* -- venue line ---------------------------------------------------------
+     The CV prints the venue the way biblatex does: the venue name in italics,
+     then volume, year and pages upright — "In:" is implied and never printed.
+     The arXiv reference is not part of the citation there either; it becomes a
+     badge, so it is lifted out of the line and handed to the badge row. */
+  function formatVenue(tail, badgeRow) {
+    var arxivAnchor = null;
+    $$('a', tail).forEach(function (anchor) {
+      if (arxivAnchor) return;
+      if (/arxiv\.org/.test(anchor.getAttribute('href') || '')) arxivAnchor = anchor;
+    });
+
+    if (arxivAnchor) {
+      var id = arxivId(arxivAnchor.textContent) || arxivId(arxivAnchor.getAttribute('href'));
+      var href = arxivAnchor.getAttribute('href');
+      var previous = arxivAnchor.previousSibling;
+      if (previous && previous.nodeType === 3) {
+        previous.data = previous.data
+          .replace(/\s*(?:arXiv\s+)?preprint\s*:?\s*$/i, '')
+          .replace(/\s+$/, '');
+      }
+      arxivAnchor.parentNode.removeChild(arxivAnchor);
+      if (id) badgeRow.appendChild(makeArxivChip(id, href));
+      // the sentence's closing period is now an orphan: let tidy() collapse it
+      tidy(tail, { lead: /^\s*[.,;:]\s*/ });
+    }
+
+    var node = tail.firstChild;
+    if (!node || node.nodeType !== 3) return;
+
+    var data = node.data.replace(/^\s*In:\s*/, '');
+    var match = data.match(/^((?:accepted by\s+)?)(.*?\([A-Z][A-Za-z0-9&/+-]{1,14}\))([\s\S]*)$/);
+    if (!match) {
+      node.data = data;
+      return;
+    }
+
+    var name = document.createElement('em');
+    name.className = 'pub__venue-name';
+    name.textContent = match[2];
+    node.data = match[3];
+
+    var parent = node.parentNode;
+    if (match[1]) parent.insertBefore(document.createTextNode(match[1]), node);
+    parent.insertBefore(name, node);
   }
 
   function highlightMe(el) {
@@ -467,17 +542,8 @@
       head.appendChild(yearChip);
     }
     if (isAward) {
-      var awardChip = document.createElement('span');
-      awardChip.className = 'chip chip--award';
-      awardChip.title = 'Best Paper Award';
-      awardChip.appendChild(svgIcon(SPARKLE, true));
-      if (awardNode) {
-        awardNode.removeAttribute('style');
-        awardChip.appendChild(awardNode);
-      } else {
-        awardChip.appendChild(document.createTextNode('Best Paper'));
-      }
-      head.appendChild(awardChip);
+      awardNode.removeAttribute('style');
+      head.appendChild(makeAwardChip(awardNode.textContent.trim()));
     }
     card.appendChild(head);
 
@@ -519,6 +585,7 @@
         anchor.rel = 'noopener';
       });
       tidy(tail, { lead: /^\s*[.,;:]\s*/ });
+      formatVenue(tail, head);
       if (tail.textContent.trim()) card.appendChild(tail);
     }
 
@@ -614,7 +681,7 @@
     controls.innerHTML =
       '<div class="pub-controls__row">' +
         '<label class="field">' +
-          svgIcon('M11 4.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z M16 16l4.5 4.5', false).outerHTML +
+          svgIcon('M11 4.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z M16 16l4.5 4.5').outerHTML +
           '<input type="search" data-filter-q placeholder="Search title, author, venue…" aria-label="Search publications">' +
         '</label>' +
         '<div class="seg" role="group" aria-label="Filter by type">' +
