@@ -1,6 +1,28 @@
 <footer class="footer">
-  {% for item in site.data.settings.social %}
-    <a href="{{ item.link }}" target="_blank"><i class="fa fa-{{ item.icon }} fa-fw" aria-hidden="true"></i></a>
-  {% endfor %}
-  <div class="post-date"><a href="{{ site.github.url }}/">{{ site.title }} | {{ site.description }} by {{ site.author }}</a></div>
+  <div class="footer__inner container-wide">
+    <div class="footer__brand">
+      <span class="brand__mark brand__mark--sm">
+        <img src="{{ '/favicon.svg' | relative_url }}" alt="" width="18" height="18">
+      </span>
+      <div>
+        <p class="footer__name">{{ site.data.settings.name }}</p>
+        <p class="footer__note">{{ site.data.settings.eyebrow }}</p>
+      </div>
+    </div>
+
+    <nav class="footer__links" aria-label="Elsewhere">
+      {% for item in site.data.settings.contacts %}
+        {%- if item.link %}
+        <a href="{{ item.link }}"{% if item.link contains '://' %} target="_blank" rel="noopener"{% endif %}>
+          {% include icon.html name=item.icon %}<span>{{ item.label }}</span>
+        </a>
+        {%- endif %}
+      {% endfor %}
+    </nav>
+  </div>
+
+  <div class="footer__base container-wide">
+    <p>© <span data-year>{{ site.time | date: '%Y' }}</span> {{ site.data.settings.name }}</p>
+    <p>Built with Jekyll · hosted on GitHub Pages</p>
+  </div>
 </footer>
