@@ -27,3 +27,5 @@ exclude:
   - node_modules
   - vendor/
   - assets/gen-favicon
+  # Private, untracked working files — keep them out of local builds too.
+  - personal/
